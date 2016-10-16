@@ -1,0 +1,10 @@
+#ErrorDocument 404 404.php
+
+<Files ~ "\.(css|js|gif|png)$">
+	allow from all
+</Files>
+
+RewriteEngine On
+
+RewriteRule ^$ frontend/web/index.php [QSA,L]
+RewriteRule ^frontend/$ frontend/web/index.php [QSA,L]

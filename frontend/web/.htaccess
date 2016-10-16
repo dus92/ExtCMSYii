@@ -1,0 +1,13 @@
+#ErrorDocument 404 404.php
+#<Files ~ "\.(css|js|gif|png)$">
+#	allow from all
+#</Files>
+
+#RewriteBase /frontend/web
+#RewriteEngine On
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^_/]+)/([^_/]+)$ index.php?r=$1/$2 [L]
+
+#RewriteCond %{THE_REQUEST} ^.*/index\.php$ 
+#RewriteRule ^(.*)index.php$ /$1 [R=301,L]

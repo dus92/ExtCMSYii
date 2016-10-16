@@ -35,7 +35,7 @@ AppAsset::register($this);
             $menuItems = [
                 ['label' => 'Главная', 'url' => ['/site/index']],
                 ['label' => 'О компании', 'url' => ['/site/about']],
-                ['label' => 'Контакты', 'url' => ['/site/contact']],
+                ['label' => 'Контакты', 'url' => ['/site/contacts']],
             ];
             if (Yii::$app->user->isGuest) {
                 $menuItems[] = ['label' => 'Регистрация', 'url' => ['/site/signup']];
