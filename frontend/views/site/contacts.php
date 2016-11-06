@@ -32,6 +32,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
                 </div>
             <?php ActiveForm::end(); ?>
+            
+            <?= Html::button('Отправить сообщение от Чат бота', ['id'=>'btn_chatbot']) ?>
         </div>
     </div>
 

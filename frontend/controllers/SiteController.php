@@ -172,4 +172,21 @@ class SiteController extends Controller
     public function actionAdmin(){
         return Yii::$app->getResponse()->redirect('../../backend/web/index.php');
     }
+    
+    public function actionChatbot(){
+        /*$ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, 'https://api.telegram.org/bot281103397:AAGUULTsv7myW2kRZdWtVAD0-jfSbiHCUf4/getUpdates');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+        curl_setopt($ch, CURLOPT_POST, true);
+      //  curl_setopt($ch,CURLOPT_POST, count($data));
+       // curl_setopt($ch,CURLOPT_POSTFIELDS, http_build_query($data));
+        $result = curl_exec($ch);
+        curl_close($ch);
+        
+        file_put_contents('file.txt', $result, FILE_APPEND);
+        */
+        
+        $data = file_get_contents('https://api.telegram.org/bot281103397:AAGUULTsv7myW2kRZdWtVAD0-jfSbiHCUf4/sendMessage?chat_id=265247146&text=222');
+        var_dump(json_decode($data, true));
+    }
 }
